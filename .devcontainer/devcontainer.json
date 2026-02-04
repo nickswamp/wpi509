@@ -1,0 +1,26 @@
+{
+    "name": "wpi",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspaces/wpi509",
+    "runArgs": [
+        "--add-host",
+        "host.docker.internal:host-gateway"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "editorconfig.editorconfig",
+                "vscjava.vscode-java-pack",
+                "cweijan.vscode-mysql-client2",
+                "mtxr.sqltools",
+                "mtxr.sqltools-driver-mysql"
+            ],
+            "settings": {
+                "editor.formatOnSave": true
+            }
+        }
+    },
+    "remoteUser": "codespace",
+    "postCreateCommand": "sudo apt update && sudo apt install -y default-mysql-client"
+}
